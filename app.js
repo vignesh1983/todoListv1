@@ -8,13 +8,8 @@ app.set('view engine', 'ejs');
 
 
 app.get("/",function(req, res){
-    //var day = new Date().getDay();
     var options = {weekday :"long", year:"numeric",month:"long",day:"numeric"};
-
-    var day = new Date().toLocaleString("en-US",options);
-    
-    //day = 0;
-    console.log(day);
+    var day = new Date().toLocaleString("en-US",options);       
     res.render("index",{dayOfWeek: day});
 });
 
